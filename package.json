@@ -1,0 +1,18 @@
+{
+  "name": "mj-talk",
+  "version": "1.0.0",
+  "description": "chat app using nodejs",
+  "main": "server.js",
+  "scripts": {
+    "test": "nodemon server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "socket.io": "^4.6.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  }
+}

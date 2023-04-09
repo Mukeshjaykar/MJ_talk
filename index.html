@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500&family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/styles/index.css" />
+    <title>MJ talk</title>
+  </head>
+  <body>
+    <main>
+      <header>
+        <div class="title">
+          <img src="/icons/chat.svg" width="35px" />
+          <h1>MJ talk</h1>
+        </div>
+        <button type="button" onclick="show_hide()">
+          <img src="/icons/hamburger.svg" width="50px" />
+        </button>
+      </header>
+      <div class="container">
+        <div class="users-window">
+          <div class="user-head">
+            <h3>people</h3>
+            <h4 class="count"></h4>
+          </div>
+          <div class="user-list"></div>
+        </div>
+        <div class="chat-window">
+          <div class="chats"></div>
+          <div class="user-input">
+            <input
+              id="user-mssg"
+              type="text"
+              placeholder="Enter your message"
+            />
+            <button id="user-send" type="button">SEND</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      var uwindow = document.querySelector(".users-window");
+      var check = uwindow.style.display;
+      console.log(check);
+      function show_hide() {
+        if (uwindow.style.display == "block") {
+          uwindow.style.display = "none";
+        } else {
+          uwindow.style.display = "block";
+        }
+      }
+    </script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/js/client.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.6.1/socket.io.js"
+      integrity="sha512-xbQU0+iHqhVt7VIXi6vBJKPh3IQBF5B84sSHdjKiSccyX/1ZI7Vnkt2/8y8uruj63/DVmCxfUNohPNruthTEQA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+  </body>
+</html>
